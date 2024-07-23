@@ -1,0 +1,41 @@
+#hexboard .main {
+    display: flex !important;
+    --s: 100px !important;
+    --m: 4px !important;
+    --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px) !important;
+    flex-wrap: wrap !important;
+  }
+  
+  #hexboard .container {
+    font-size: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  #hexboard .container div {
+    width: var(--s) !important;
+    margin: var(--m) !important;
+    height: calc(var(--s) * 1.1547) !important;
+    display: inline-block !important;
+    font-size: initial !important;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%) !important;
+    background: red !important;
+    margin-bottom: calc(var(--m) - var(--s) * 0.2885) !important;
+  }
+  
+  #hexboard .container div:nth-child(odd) {
+    background: green !important;
+  }
+  
+  #hexboard .container::before {
+    content: "" !important;
+    width: calc(var(--s) / 2 + var(--m)) !important;
+    float: left !important;
+    height: 120% !important;
+    shape-outside: repeating-linear-gradient(
+      #0000 0 calc(var(--f) - 3px) !important,
+      #000 0 var(--f) !important
+    ) !important;
+  }
+  
