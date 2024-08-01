@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagonal Chess</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-6 col-xl-6">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <h2 class="fw-bold mb-2 text-uppercase">Main</h2>
+                            <p class="text-white-50 mb-5 user-data">This is my user data</p>
+                            <div id="hexboard" class="hexboard">
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon gray">5</div>
+                                <div class="hexagon black">6</div>
+                                <div class="hexagon gray">7</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon black">15</div>
+                                <div class="hexagon white">16</div>
+                                <div class="hexagon black">17</div>
+                                <div class="hexagon white">18</div>
+                                <div class="hexagon black">19</div>
+                                <div class="hexagon white">20</div>
+                                <div class="hexagon black">21</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon white">25</div>
+                                <div class="hexagon gray">26</div>
+                                <div class="hexagon white">27</div>
+                                <div class="hexagon gray">28</div>
+                                <div class="hexagon white">29</div>
+                                <div class="hexagon gray">30</div>
+                                <div class="hexagon white">31</div>
+                                <div class="hexagon gray">32</div>
+                                <div class="hexagon white">33</div>
+                                <div class="hexagon gray">34</div>
+                                <div class="hexagon white">35</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon gray">37</div>
+                                <div class="hexagon black">38</div>
+                                <div class="hexagon gray">39</div>
+                                <div class="hexagon black">40</div>
+                                <div class="hexagon gray">41</div>
+                                <div class="hexagon black">42</div>
+                                <div class="hexagon gray">43</div>
+                                <div class="hexagon black">44</div>
+                                <div class="hexagon gray">45</div>
+                                <div class="hexagon black">46</div>
+                                <div class="hexagon gray">47</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon black">49</div>
+                                <div class="hexagon white">50</div>
+                                <div class="hexagon black">51</div>
+                                <div class="hexagon white">52</div>
+                                <div class="hexagon black">53</div>
+                                <div class="hexagon white">54</div>
+                                <div class="hexagon black">55</div>
+                                <div class="hexagon white">56</div>
+                                <div class="hexagon black">57</div>
+                                <div class="hexagon white">58</div>
+                                <div class="hexagon black">59</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon white">61</div>
+                                <div class="hexagon gray">62</div>
+                                <div class="hexagon white">63</div>
+                                <div class="hexagon gray">64</div>
+                                <div class="hexagon white">65</div>
+                                <div class="hexagon gray">66</div>
+                                <div class="hexagon white">67</div>
+                                <div class="hexagon gray">68</div>
+                                <div class="hexagon white">69</div>
+                                <div class="hexagon gray">70</div>
+                                <div class="hexagon white">71</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon gray">73</div>
+                                <div class="hexagon black">74</div>
+                                <div class="hexagon gray">75</div>
+                                <div class="hexagon black">76</div>
+                                <div class="hexagon gray">77</div>
+                                <div class="hexagon black">78</div>
+                                <div class="hexagon gray">79</div>
+                                <div class="hexagon black">80</div>
+                                <div class="hexagon gray">81</div>
+                                <div class="hexagon black">82</div>
+                                <div class="hexagon gray">83</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon black">85</div>
+                                <div class="hexagon white">86</div>
+                                <div class="hexagon black">87</div>
+                                <div class="hexagon white">88</div>
+                                <div class="hexagon black">89</div>
+                                <div class="hexagon white">90</div>
+                                <div class="hexagon black">91</div>
+                                <div class="hexagon white">92</div>
+                                <div class="hexagon black">93</div>
+                                <div class="hexagon white">94</div>
+                                <div class="hexagon black">95</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon gray">98</div>
+                                <div class="hexagon white">99</div>
+                                <div class="hexagon gray">100</div>
+                                <div class="hexagon white">101</div>
+                                <div class="hexagon gray">102</div>
+                                <div class="hexagon white">103</div>
+                                <div class="hexagon gray">104</div>
+                                <div class="hexagon white">105</div>
+                                <div class="hexagon gray">106</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon black">112</div>
+                                <div class="hexagon gray">113</div>
+                                <div class="hexagon black">114</div>
+                                <div class="hexagon gray">115</div>
+                                <div class="hexagon black">116</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon white">126</div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                                <div class="hexagon dissabled"></div>
+                            </div>
+                            <p class="text-white-50 mb-5 user-data">This is my 2nd user data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

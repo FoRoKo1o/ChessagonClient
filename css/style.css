@@ -1,0 +1,47 @@
+* {
+  --w: 50px; /* hexagon width */
+  --h: calc(var(--w) * sqrt(3) / 2); /* hexagon height */
+}
+
+.hexboard {
+  display: grid;
+  grid-template-columns: repeat(12, calc(var(--w) * 0.75));
+  grid-template-rows: repeat(11, var(--h));
+  column-gap: 0px;
+  row-gap: 0px;
+  /* justify-content: center; */
+  align-content: center;
+  width: calc(12 * calc(var(--w) * 0.75));
+  height: calc(11 * var(--h));
+  margin: auto;
+}
+
+.hexagon {
+  color: rgb(31, 36, 183); /* dev */
+  width: var(--w);
+  height: var(--h);
+  clip-path: polygon(
+      25% 0%, 
+      75% 0%, 
+      100% 50%, 
+      75% 100%, 
+      25% 100%, 
+      0% 50%
+  );
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.hexagon:nth-child(odd) {
+  transform: translateY(calc(var(--h) / 2)); /* hexagon height / 2 */
+}
+.white {
+  background-color: white;
+}
+.black {
+  background-color: black;
+}
+.gray {
+  background-color: gray;
+}
