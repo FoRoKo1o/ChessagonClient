@@ -1,34 +1,47 @@
+* {
+  --w: 50px; /* hexagon width */
+  --h: calc(var(--w) * sqrt(3) / 2); /* hexagon height */
+}
+
 .hexboard {
-    width: 100%;
-    height: 0;
-    padding-top: 100%; /* Proporcje 1:1 */
-    position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, calc(var(--w) * 0.75));
+  grid-template-rows: repeat(11, var(--h));
+  column-gap: 0px;
+  row-gap: 0px;
+  /* justify-content: center; */
+  align-content: center;
+  width: calc(12 * calc(var(--w) * 0.75));
+  height: calc(11 * var(--h));
+  margin: auto;
 }
 
-.hexboard-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #143a5f; /* Kolor tła dla lepszej widoczności */
-    border: 1px solid #0e63b8; /* Opcjonalnie, dla konturów */
-}
-.hex {
-    width: 50px;
-    height: 50px;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    position: absolute;
-}
-
-.hex.black {
-    background-color: #000000;
+.hexagon {
+  color: rgb(31, 36, 183); /* dev */
+  width: var(--w);
+  height: var(--h);
+  clip-path: polygon(
+      25% 0%, 
+      75% 0%, 
+      100% 50%, 
+      75% 100%, 
+      25% 100%, 
+      0% 50%
+  );
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
-.hex.gray {
-    background-color: #6e6e6e;
+.hexagon:nth-child(odd) {
+  transform: translateY(calc(var(--h) / 2)); /* hexagon height / 2 */
 }
-
-.hex.white {
-    background-color: #ffffff;
+.white {
+  background-color: white;
+}
+.black {
+  background-color: black;
+}
+.gray {
+  background-color: gray;
 }
