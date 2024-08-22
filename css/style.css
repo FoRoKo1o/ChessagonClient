@@ -2,7 +2,6 @@
   --w: 50px; /* hexagon width */
   --h: calc(var(--w) * sqrt(3) / 2); /* hexagon height */
 }
-
 .hexboard {
   display: grid;
   grid-template-columns: repeat(12, calc(var(--w) * 0.75));
@@ -31,6 +30,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  pointer-events: auto;
 }
 
 .hexagon:nth-child(odd) {
@@ -44,4 +44,14 @@
 }
 .gray {
   background-color: gray;
+}
+.attack-icon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 50;
 }
