@@ -61,8 +61,3 @@ const whitePieces = {
         hexagon.appendChild(img);
     });
 }
-window.onload = function() {
-    clearHexboard();     
-    setPieceImages();    
-};
-

@@ -161,5 +161,7 @@ function addHexagonClickHandlers() {
 }
 
 window.onload = function() {
+    clearHexboard();     
+    setPieceImages();    
     addHexagonClickHandlers();
 };
