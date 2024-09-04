@@ -16,11 +16,16 @@ function onHexagonClick(event) {
         clearPossibleMoves();
     }
 
-    activePiece = clickedHexagon.id;
+    // If pawn is clicked
+    const pieceImage = clickedHexagon.querySelector('img');
+    if (pieceImage && pieceImage.src.includes('pawn')) {
+        activePiece = clickedHexagon.id;
 
-    generatePawnMoves(clickedHexagon, possibleMoves);
+        generatePawnMoves(clickedHexagon, possibleMoves);
+    }
     showPossibleMoves();
 }
+
 
 function showPossibleMoves() {
     possibleMoves.forEach(moveId => {
