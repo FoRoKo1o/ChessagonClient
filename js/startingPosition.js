@@ -51,6 +51,19 @@ const whitePieces = {
     126: "white_bishop.png",
 };
 
+// Note: Testing individual pieces
+
+// const blackPieces = {
+//     66: "black_rook.png",
+//     //65: "black_rook.png",
+// };
+// const whitePieces = {
+//     // 18: "white_pawn.png",
+//     // 46: "white_pawn.png",
+//     // 86: "white_pawn.png",
+//     // 64: "white_rook.png",
+// }
+
     const allPieces = {...blackPieces, ...whitePieces};
 
     Object.keys(allPieces).forEach(id => {

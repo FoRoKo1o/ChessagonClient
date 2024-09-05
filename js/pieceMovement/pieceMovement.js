@@ -1,4 +1,5 @@
 import { generatePawnMoves } from './pawnLogic.js';
+import { generateRookMoves } from './rookLogic.js';
 
 const hexagons = document.querySelectorAll('#hexboard .hexagon');
 let activePiece = null;
@@ -23,9 +24,20 @@ function onHexagonClick(event) {
 
         generatePawnMoves(clickedHexagon, possibleMoves);
     }
+    // If bishop is clicked
+    if (pieceImage && pieceImage.src.includes('bishop')) {
+        activePiece = clickedHexagon.id;
+
+        generateBishopMoves(clickedHexagon, possibleMoves);
+    }
+    // If rook is clicked
+    if (pieceImage && pieceImage.src.includes('rook')) {
+        activePiece = clickedHexagon.id;
+
+        generateRookMoves(clickedHexagon, possibleMoves);
+    }
     showPossibleMoves();
 }
-
 
 function showPossibleMoves() {
     possibleMoves.forEach(moveId => {
@@ -85,7 +97,6 @@ function clearPossibleMoves() {
                 attackImg.remove();
                 moveHexagon.classList.remove('attack');
             }
-
             moveHexagon.onclick = null;
         }
     });
@@ -100,6 +111,7 @@ function addHexagonClickHandlers() {
         } else {
             hex.onclick = null;
         }
+        hex.classList.remove('attack');
     });
 }
 
