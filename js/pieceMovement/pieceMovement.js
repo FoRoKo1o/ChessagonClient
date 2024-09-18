@@ -1,6 +1,6 @@
 import { generatePawnMoves } from './pawnLogic.js';
 import { generateRookMoves } from './rookLogic.js';
-
+import { generateBishopMoves } from './bishopLogic.js';
 const hexagons = document.querySelectorAll('#hexboard .hexagon');
 let activePiece = null;
 let possibleMoves = [];

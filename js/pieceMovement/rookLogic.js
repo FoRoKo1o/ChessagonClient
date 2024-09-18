@@ -5,16 +5,16 @@ export function generateRookMoves(activeHexagon, possibleMoves) {
     const pieceImage = activeHexagon.querySelector('img');
     if (!pieceImage) return;
 
-    // Ustal kolor aktywnej wieży
+    // Get piece color
     const isWhitePiece = pieceImage.src.includes('white');
 
-    // Funkcja pomocnicza sprawdzająca, czy można kontynuować ruch w danym kierunku
+    // Check if not exedding board
     function canMoveTo(hexId) {
         const hex = document.getElementById(hexId);
         return hex && !hex.classList.contains('dissabled');
     }
 
-    // Funkcja dodająca ruchy w pionie (góra-dół)
+    // Horizontal moves
     function addMovesInDirection(step) {
         let nextHexId = activeId + step;
 
@@ -22,7 +22,7 @@ export function generateRookMoves(activeHexagon, possibleMoves) {
             const nextHex = document.getElementById(nextHexId);
             
             if (!nextHex || nextHex.classList.contains('dissabled')) {
-                break;  // Jeśli pole nie istnieje lub jest zablokowane, zatrzymaj ruch w tym kierunku
+                break;  //stop movement id given direction when we reach the end of the board
             }
 
             const pieceImg = nextHex.querySelector('img');
@@ -30,13 +30,13 @@ export function generateRookMoves(activeHexagon, possibleMoves) {
             if (pieceImg) {
                 if ((isWhitePiece && pieceImg.src.includes('black')) || 
                     (!isWhitePiece && pieceImg.src.includes('white'))) {
-                    // Jeśli na tym polu stoi pionek przeciwnika, dodaj możliwość ataku
+                    // Add attack move if enemy piece is on the way
                     possibleMoves.push(nextHexId);
                     nextHex.classList.add('attack');
                 }
-                break;  // Zatrzymaj ruch, ponieważ pole jest zajęte (nie można kontynuować)
+                break;  // Stop movement because field is occupied
             } else {
-                // Dodaj pole jako możliwy ruch, jeśli jest puste
+                // Add new possible move
                 possibleMoves.push(nextHexId);
             }
 
@@ -44,14 +44,14 @@ export function generateRookMoves(activeHexagon, possibleMoves) {
         }
     }
 
-    // Funkcja dodająca ruchy po przekątnych
+    // Diagonal moves
     function addDiagonalMoves(startId, directionOdd, directionEven) {
         let currentId = startId;
 
         while (true) {
-            const isOdd = currentId % 2 !== 0;  // Czy rząd nieparzysty czy parzysty
-            const nextHexId = currentId + (isOdd ? directionOdd : directionEven);  // Wybieramy właściwy kierunek
-            if (!canMoveTo(nextHexId)) break;  // Jeśli ruch nie jest możliwy, przerwij pętlę
+            const isOdd = currentId % 2 !== 0;
+            const nextHexId = currentId + (isOdd ? directionOdd : directionEven);  // choose direction based on current hexagon
+            if (!canMoveTo(nextHexId)) break; 
 
             const nextHex = document.getElementById(nextHexId);
             const pieceImg = nextHex.querySelector('img');
@@ -59,13 +59,12 @@ export function generateRookMoves(activeHexagon, possibleMoves) {
             if (pieceImg) {
                 if ((isWhitePiece && pieceImg.src.includes('black')) || 
                     (!isWhitePiece && pieceImg.src.includes('white'))) {
-                    // Jeśli na tym polu stoi pionek przeciwnika, dodaj możliwość ataku
+                    // Add attack move if enemy piece is on the way
                     possibleMoves.push(nextHexId);
                     nextHex.classList.add('attack');
                 }
-                break;  // Zatrzymaj ruch, ponieważ pole jest zajęte (nie można kontynuować)
+                break;
             } else {
-                // Dodaj pole jako możliwy ruch, jeśli jest puste
                 possibleMoves.push(nextHexId);
             }
 
@@ -73,13 +72,13 @@ export function generateRookMoves(activeHexagon, possibleMoves) {
         }
     }
 
-    // Ruchy pionowe
-    addMovesInDirection(-12);  // Ruch w górę
-    addMovesInDirection(12);   // Ruch w dół
+    // Veritical moves
+    addMovesInDirection(-12);  // Up
+    addMovesInDirection(12);   // Down
 
-    // Ruchy po przekątnych zależne od parzystości rzędu
-    addDiagonalMoves(activeId, -1, -13);  // Przekątna lewo-góra
-    addDiagonalMoves(activeId, 11, -1);   // Przekątna lewo-dół
-    addDiagonalMoves(activeId, 13, 1);    // Przekątna prawo-dół
-    addDiagonalMoves(activeId, 1, -11);   // Przekątna prawo-góra
+    // Diagonal moves
+    addDiagonalMoves(activeId, -1, -13);  // Left-up
+    addDiagonalMoves(activeId, 11, -1);   // Left-down
+    addDiagonalMoves(activeId, 13, 1);    // Right-down
+    addDiagonalMoves(activeId, 1, -11);   // Right-up
 }
