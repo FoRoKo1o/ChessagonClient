@@ -1,6 +1,7 @@
 import { generatePawnMoves } from './pawnLogic.js';
 import { generateRookMoves } from './rookLogic.js';
 import { generateBishopMoves } from './bishopLogic.js';
+import { generateQueenMoves } from './QueenLogic.js';
 const hexagons = document.querySelectorAll('#hexboard .hexagon');
 let activePiece = null;
 let possibleMoves = [];
@@ -36,6 +37,12 @@ function onHexagonClick(event) {
 
         generateRookMoves(clickedHexagon, possibleMoves);
     }
+    // if Queen is clicked
+    if (pieceImage && pieceImage.src.includes('queen')) {
+        activePiece = clickedHexagon.id;
+
+        generateQueenMoves(clickedHexagon, possibleMoves);
+    }    
     showPossibleMoves();
 }
 

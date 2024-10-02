@@ -55,8 +55,7 @@ const whitePieces = {
 // Note: Testing individual pieces
 
 // const blackPieces = {
-//     55: "black_bishop.png",
-//     //65: "black_rook.png",
+//     66: "black_queen.png",
 // };
 // const whitePieces = {
 //     18: "white_pawn.png",
