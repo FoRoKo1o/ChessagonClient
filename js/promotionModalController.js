@@ -8,9 +8,14 @@ function ShowModal(/*type: number*/hexId)
     modal.style.display = "block";
     LoadImages(color);
 }
-function CloseModal()
+function PiecePromotionChoosed(/*img*/ pieceType)
 {
+    PromotePiece(GetChessPieceType(pieceType));
     modal.style.display = "none";
+}
+function PromotePiece()
+{
+    throw new Error("NotImplementedException");
 }
 function LoadImages(/*string*/color)
 {
