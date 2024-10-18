@@ -2,7 +2,7 @@ const modal = document.getElementsByClassName("myModal")[0];
 const whiteColor = "white";
 const blackColor = "black";
 const collectionOfPromotedPieces = ["bishop","rook","knight","queen"];
-function ShowModal(/*type: number*/hexId)
+export function ShowModal(/*type: number*/hexId)
 {
     var color = GetChessPieceColor(hexId);
     modal.style.display = "block";
@@ -17,16 +17,16 @@ function PromotePiece()
 {
     throw new Error("NotImplementedException");
 }
-function LoadImages(/*string*/color)
+function LoadImages(/*string*/color) //HTMLCollection imageBorders does not support forEach
 {
     var imageBorders = document.getElementsByClassName("ImageForSelection");
-    var i = 0;
-    imageBorders.forEach(element => {
-        var imageName = color;
-        imageName += "_" + collectionOfPromotedPieces[i] + ".png";
-        var image = document.createElement("img")
+    for (let i = 0; i < imageBorders.length; i++) {
+        var element = imageBorders[i];
+        var imageName = "../art/" + color + "_" + collectionOfPromotedPieces[i] + ".png";
+        var image = document.createElement("img");
         image.src = imageName;
-        element.AppendChild(image);
-        i++;
-    });
+        element.appendChild(image);
+    }
 }
+
+window.PiecePromotionChoosed = PiecePromotionChoosed; //Fixing the issue with the function not being found in the html file (importing file as a module)

@@ -2,9 +2,12 @@ import { generatePawnMoves } from './pawnLogic.js';
 import { generateRookMoves } from './rookLogic.js';
 import { generateBishopMoves } from './bishopLogic.js';
 import { generateQueenMoves } from './QueenLogic.js';
+import { ShowModal } from '../promotionModalController.js';
 const hexagons = document.querySelectorAll('#hexboard .hexagon');
 let activePiece = null;
 let possibleMoves = [];
+const blackPromotionSquares = [85, 98, 99, 112, 113, 126, 115, 116, 105, 106, 95];
+const whitePromotionSquares = [25, 26, 15, 16, 5, 6, 7, 20, 21, 34, 35];
 
 function clearActivePiece() {
     activePiece = null;
@@ -81,6 +84,23 @@ function onPossibleMoveClick(event) {
 
     moveHexagon.innerHTML = '';
     moveHexagon.appendChild(activeImg);
+
+    // Check for pawn promotion
+    const isWhitePawn = activeImg.src.includes('white') && activeImg.src.includes('pawn');
+    const isBlackPawn = activeImg.src.includes('black') && activeImg.src.includes('pawn');
+    const moveHexId = parseInt(moveHexagon.id);
+
+    //Sotution 1
+    // if (isWhitePawn && whitePromotionSquares.includes(moveHexId)) {
+    //     ShowModal(moveHexId, 'white');
+    // } else if (isBlackPawn && blackPromotionSquares.includes(moveHexId)) {
+    //     ShowModal(moveHexId, 'black');
+    // }
+    
+    // //Solution 2
+    if(whitePromotionSquares.includes(moveHexId) || blackPromotionSquares.includes(moveHexId)){
+        ShowModal(moveHexId);
+    }
 
     clearActivePiece();
     clearPossibleMoves();

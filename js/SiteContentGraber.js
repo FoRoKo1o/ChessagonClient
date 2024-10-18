@@ -6,12 +6,12 @@ function GetChessPieceColor(hexId)
     var regexBlack = /black+/gi;
     if(chessPieceImage.match(regexWhite))
     {
-        console.log("white")
+        //console.log("white")
         return "white"
     }
     else if(chessPieceImage.match(regexBlack))
     {
-        console.log("black")
+        //console.log("black")
         return "black"
     }
     else
