@@ -1,0 +1,18 @@
+.SelectionGrid
+{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 20vh;
+}
+.ImageForSelection
+{
+    border-radius: 10px;
+    border: solid;
+    border-color: #505050;
+    border-radius: 0.5vh;
+    width: 15vh;
+    height: 80%;
+    background-color: #1c1c1c;
+}
