@@ -2,8 +2,12 @@ const modal = document.getElementsByClassName("myModal")[0];
 const whiteColor = "white";
 const blackColor = "black";
 const collectionOfPromotedPieces = ["bishop","rook","knight","queen"];
+
+var promotionPieceLocation = null;
+
 export function ShowModal(/*type: number*/hexId)
 {
+    promotionPieceLocation = hexId;
     var color = GetChessPieceColor(hexId);
     modal.style.display = "block";
     LoadImages(color);
@@ -13,9 +17,15 @@ function PiecePromotionChoosed(/*img*/ pieceType)
     PromotePiece(GetChessPieceType(pieceType));
     modal.style.display = "none";
 }
-function PromotePiece()
+function PromotePiece(pieceType)
 {
-    throw new Error("NotImplementedException");
+    //console.log("Promoting pawn at location: " + promotionPieceLocation + " to " + pieceType);
+    let promotionHex = document.getElementById(promotionPieceLocation);
+    let color = GetChessPieceColor(promotionPieceLocation);
+    promotionHex.innerHTML = ""; //remove piece from the board
+    let image = document.createElement("img");
+    image.src = "../art/" + color + "_" + pieceType + ".png";
+    promotionHex.appendChild(image); //add new piece to the board
 }
 function LoadImages(/*string*/color) //HTMLCollection imageBorders does not support forEach
 {
