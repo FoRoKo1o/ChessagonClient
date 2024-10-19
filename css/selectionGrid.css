@@ -8,6 +8,7 @@
 }
 .ImageForSelection
 {
+    vertical-align: middle;
     border-radius: 10px;
     border: solid;
     border-color: #505050;

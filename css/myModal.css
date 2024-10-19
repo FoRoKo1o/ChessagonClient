@@ -1,4 +1,5 @@
 .myModal {
+    opacity: 0;
     display: none; 
     color: White;
     position: fixed; 
@@ -10,8 +11,8 @@
     overflow: auto; 
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s forwards;
   }
-  
   .myModal-content {
     position: relative;
     margin: auto;
@@ -21,4 +22,18 @@
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .imageFitter
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
