@@ -8,7 +8,6 @@ function clearHexboard() {
 }
 
 function setPieceImages() {
-   // Starting black possition
 
 const blackPieces = {
     5: "black_queen.png",
@@ -55,7 +54,7 @@ const whitePieces = {
 // Note: Testing individual pieces
 
 // const blackPieces = {
-//     66: "black_queen.png",
+//     66: "black_knight.png",
 // };
 // const whitePieces = {
 //     18: "white_pawn.png",
