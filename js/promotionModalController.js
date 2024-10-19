@@ -9,8 +9,8 @@ export function ShowModal(/*type: number*/hexId)
 {
     promotionPieceLocation = hexId;
     var color = GetChessPieceColor(hexId);
-    modal.style.display = "block";
     LoadImages(color);
+    modal.style.display = "block";
 }
 function PiecePromotionChoosed(/*img*/ pieceType)
 {
@@ -29,9 +29,11 @@ function PromotePiece(pieceType)
 }
 function LoadImages(/*string*/color) //HTMLCollection imageBorders does not support forEach
 {
+    
     var imageBorders = document.getElementsByClassName("ImageForSelection");
     for (let i = 0; i < imageBorders.length; i++) {
         var element = imageBorders[i];
+        element.innerHTML = '';
         var imageName = "../art/" + color + "_" + collectionOfPromotedPieces[i] + ".png";
         var image = document.createElement("img");
         image.src = imageName;

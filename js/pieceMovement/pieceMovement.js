@@ -90,18 +90,11 @@ function onPossibleMoveClick(event) {
     const isBlackPawn = activeImg.src.includes('black') && activeImg.src.includes('pawn');
     const moveHexId = parseInt(moveHexagon.id);
 
-    //Sotution 1
-    // if (isWhitePawn && whitePromotionSquares.includes(moveHexId)) {
-    //     ShowModal(moveHexId, 'white');
-    // } else if (isBlackPawn && blackPromotionSquares.includes(moveHexId)) {
-    //     ShowModal(moveHexId, 'black');
-    // }
-    
-    // //Solution 2
-    if(whitePromotionSquares.includes(moveHexId) || blackPromotionSquares.includes(moveHexId)){
-        ShowModal(moveHexId);
+    if (isWhitePawn && whitePromotionSquares.includes(moveHexId)) {
+        ShowModal(moveHexId, 'white');
+    } else if (isBlackPawn && blackPromotionSquares.includes(moveHexId)) {
+        ShowModal(moveHexId, 'black');
     }
-
     clearActivePiece();
     clearPossibleMoves();
     
