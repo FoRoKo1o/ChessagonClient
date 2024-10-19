@@ -37,6 +37,7 @@ function LoadImages(/*string*/color) //HTMLCollection imageBorders does not supp
         var imageName = "../art/" + color + "_" + collectionOfPromotedPieces[i] + ".png";
         var image = document.createElement("img");
         image.src = imageName;
+        image.classList.add("imageFitter");
         element.appendChild(image);
     }
 }
