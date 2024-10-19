@@ -29,31 +29,31 @@ When a pawn reaches the last row of the opponent's side, a modal appears for the
 ### Rook
 Moves in straight lines across the board's hexagonal axes.
 <p align="center">
-    <img src="/Art/Preview/RookMovement.png.png" alt="Rook movement" />
+    <img src="/Art/Preview/RookMovement.png" alt="Rook movement" />
   </p>
 
 ### Bishop
 Moves diagonally along the hexagonal grid.
 <p align="center">
-    <img src="/Art/Preview/BishopMovement.png.png.png" alt="Bishop movement" />
+    <img src="/Art/Preview/BishopMovement.png" alt="Bishop movement" />
   </p>
 
 ### Queen
 Combines the movement capabilities of the rook and bishop, moving both in straight and diagonal lines.
 <p align="center">
-    <img src="/Art/Preview/QueenMovement.png.png.png.png" alt="Queen movement" />
+    <img src="/Art/Preview/QueenMovement.png" alt="Queen movement" />
   </p>
 
 ### Knight
 Follows an adapted "L"-shaped movement specific to the hexagonal grid, allowing the knight to jump over pieces.
 <p align="center">
-    <img src="/Art/Preview/KnightMovement.png.png.png.png.png" alt="Knight movement" />
+    <img src="/Art/Preview/KnightMovement.png" alt="Knight movement" />
   </p>
 
 ### King
 Moves one step in any direction (straight or diagonal).
 <p align="center">
-    <img src="/Art/Preview/KingMovement.png.png.png.png.png" alt="King movement" />
+    <img src="/Art/Preview/KingMovement.png" alt="King movement" />
   </p>
 
 
