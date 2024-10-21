@@ -34,7 +34,7 @@ function LoadImages(/*string*/color) //HTMLCollection imageBorders does not supp
     for (let i = 0; i < imageBorders.length; i++) {
         var element = imageBorders[i];
         element.innerHTML = '';
-        var imageName = "../art/" + color + "_" + collectionOfPromotedPieces[i] + ".png";
+        var imageName = "../Art/" + color + "_" + collectionOfPromotedPieces[i] + ".png";
         var image = document.createElement("img");
         image.src = imageName;
         image.classList.add("imageFitter");
