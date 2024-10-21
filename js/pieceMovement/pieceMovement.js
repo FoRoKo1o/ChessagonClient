@@ -64,10 +64,10 @@ function showPossibleMoves() {
             const img = document.createElement('img');
 
             if (moveHexagon.classList.contains('attack')) {
-                img.src = `../Art/attack.png`;
+                img.src = `../art/attack.png`;
                 img.classList.add('attack-icon');
             } else {
-                img.src = `../Art/possibleMove.png`;
+                img.src = `../art/possibleMove.png`;
             }
 
             img.alt = 'possible move';
