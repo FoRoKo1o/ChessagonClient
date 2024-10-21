@@ -1,111 +1,29 @@
-* {
-  --w: 50px; /* hexagon width */
-  --h: calc(var(--w) * sqrt(3) / 2); /* hexagon height */
-  color: white;
-}
-.hexboard {
-  display: grid;
-  grid-template-columns: repeat(12, calc(var(--w) * 0.75));
-  grid-template-rows: repeat(11, var(--h));
-  column-gap: 0px;
-  row-gap: 0px;
-  /* justify-content: center; */
-  align-content: center;
-  width: calc(12 * calc(var(--w) * 0.75));
-  height: calc(11 * var(--h));
-  margin: auto;
-}
-
-.hexagon {
-  color: rgb(31, 36, 183); /* dev */
-  width: var(--w);
-  height: var(--h);
-  clip-path: polygon(
-      25% 0%, 
-      75% 0%, 
-      100% 50%, 
-      75% 100%, 
-      25% 100%, 
-      0% 50%
-  );
-  margin: 0;
-  padding: 0;
-  position: relative;
-  pointer-events: auto;
-}
-
-.hexagon:nth-child(odd) {
-  transform: translateY(calc(var(--h) / 2)); /* hexagon height / 2 */
-}
-.white {
-  background-color: white;
-}
-.black {
-  background-color: black;
-}
-.gray {
-  background-color: gray;
-}
-.attack-icon {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  opacity: 50;
-}
-.sidebar {
-  
-  right: 0;
-  height: 95vh;
-  width: 100%;
-  background-color: #2B3036;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  z-index: 1;
+:root
+{
+  --StandardGray-0: #2B3036;
+  --StandardGray-1: #303030;
+  --StandardGray-2: #212121;
+  --StandardGray-3: #1c1c1c;
+  --StandardGray-4: #0B0B0D;
 }
 .roundedCorners
 {
   border-radius: 5px;
-  border: solid 1px black;
+  border: solid 1px var(--StandardGray-4);
 }
-.timer
+.mainVisualElement
 {
-  text-align: center;
-}
-#timmers > div
-{
-  margin-top: 0.5vh;
-}
-.sidebar > div
-{
-  margin-bottom: 1.5vh;
-}
-
-#movesHistory
-{
-  height: 20vh;
-  width: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-div#movesHistory div.row
-{
-  text-align: center;
-}
-div#movesHistory div.row:nth-child(odd) /*every div with class="col" that is a child element of div with id="movesHistory"*/
-{
-  background-color: #212121;
+    background-color: var(--StandardGray-0);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    padding: 20px;
 }
 ::-webkit-scrollbar
 {
-  background-color: #303030;
+  background-color: var(--StandardGray-1);
   width: 0.5vw;
 }
 ::-webkit-scrollbar-thumb
 {
-  background-color: #0B0B0D;
+  background-color: var(--StandardGray-4);
 }

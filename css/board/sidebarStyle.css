@@ -1,0 +1,32 @@
+.sidebar {
+  
+    right: 0;
+    height: 95vh;
+    width: 100%;
+    z-index: 1;
+  }
+  #timmers > div
+  {
+    margin-top: 0.5vh;
+  }
+  .sidebar > div
+  {
+    margin-bottom: 1.5vh;
+  }
+  
+  #movesHistory
+  {
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  /*these styles are for elements that will be added from the code*/
+  div#movesHistory div.row
+  {
+    text-align: center;
+  }
+  div#movesHistory div.row:nth-child(odd)
+  {
+    background-color: var(--StandardGray-2);
+  }
