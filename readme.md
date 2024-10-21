@@ -1,4 +1,4 @@
-# HEXAGON - Hexagonal Chess Game
+# Chessagon - Hexagonal Chess Game
 
 ## Overview
 
