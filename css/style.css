@@ -1,6 +1,7 @@
 * {
   --w: 50px; /* hexagon width */
   --h: calc(var(--w) * sqrt(3) / 2); /* hexagon height */
+  color: white;
 }
 .hexboard {
   display: grid;
@@ -46,7 +47,7 @@
   background-color: gray;
 }
 .attack-icon {
-  position: absolute;
+  position: relative;
   width: 35px;
   height: 35px;
   top: 50%;
@@ -54,4 +55,32 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 50;
+}
+.sidebar {
+  
+  right: 0;
+  height: 95vh;
+  width: 100%;
+  background-color: #2B3036;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1;
+}
+.roundedCorners
+{
+  border-radius: 5px;
+  border: solid 1px black;
+}
+.timer
+{
+  text-align: center;
+}
+#timmers > div
+{
+  margin-top: 0.5vh;
+}
+.sidebar > div
+{
+  margin-bottom: 1.5vh;
 }
