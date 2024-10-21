@@ -84,3 +84,28 @@
 {
   margin-bottom: 1.5vh;
 }
+
+#movesHistory
+{
+  height: 20vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+div#movesHistory div.row
+{
+  text-align: center;
+}
+div#movesHistory div.row:nth-child(odd) /*every div with class="col" that is a child element of div with id="movesHistory"*/
+{
+  background-color: #212121;
+}
+::-webkit-scrollbar
+{
+  background-color: #303030;
+  width: 0.5vw;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: #0B0B0D;
+}
