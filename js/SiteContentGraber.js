@@ -29,3 +29,26 @@ function GetChessPieceType(/*img*/ img)
     if(img.src.includes("queen"))
         return "queen";
 }
+
+function GetBoardPossition(){
+    var boardState = [];
+
+    document.querySelectorAll('#hexboard .hexagon').forEach(hex => {
+        const pieceImg = hex.querySelector('img');
+        if (pieceImg) {
+            const pieceColor = pieceImg.src.includes('white') ? 'white' : 'black';
+            const pieceType = pieceImg.src.includes('pawn') ? 'pawn' :
+                              pieceImg.src.includes('rook') ? 'rook' :
+                              pieceImg.src.includes('bishop') ? 'bishop' :
+                              pieceImg.src.includes('queen') ? 'queen' :
+                              pieceImg.src.includes('knight') ? 'knight' : null;
+
+            boardState.push({
+                position: parseInt(hex.id),
+                piece: pieceType,
+                color: pieceColor
+            });
+        }
+    });
+    return boardState;
+}
