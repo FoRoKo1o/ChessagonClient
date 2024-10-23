@@ -30,3 +30,36 @@
   {
     background-color: var(--StandardGray-2);
   }
+  #chat
+  {
+    height: 45vh;
+  }
+  #chatInput
+  {
+    width: 80%;
+    background-color: #3B3B3B;
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  #chatEntryButton
+  {
+    text-align: start;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+    font-size: 12px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+  }
+  #chatEntryButton:hover
+  {
+    background-color: var(--StandardGray-3);
+  }
+  #chatElement
+  {
+    margin: 0px;
+    overflow: hidden
+  }
