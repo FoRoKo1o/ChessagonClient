@@ -68,7 +68,7 @@ const whitePieces = {
     Object.keys(allPieces).forEach(id => {
         const hexagon = document.getElementById(id);
         const img = document.createElement('img');
-        img.src = `../Art/${allPieces[id]}`;
+        img.src = `../art/${allPieces[id]}`;
         img.alt = allPieces[id].split('.')[0];
         hexagon.appendChild(img);
     });

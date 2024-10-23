@@ -1,0 +1,65 @@
+.sidebar {
+  
+    right: 0;
+    height: 95vh;
+    width: 100%;
+    z-index: 1;
+  }
+  #timmers > div
+  {
+    margin-top: 0.5vh;
+  }
+  .sidebar > div
+  {
+    margin-bottom: 1.5vh;
+  }
+  
+  #movesHistory
+  {
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  /*these styles are for elements that will be added from the code*/
+  div#movesHistory div.row
+  {
+    text-align: center;
+  }
+  div#movesHistory div.row:nth-child(odd)
+  {
+    background-color: var(--StandardGray-2);
+  }
+  #chat
+  {
+    height: 45vh;
+  }
+  #chatInput
+  {
+    width: 80%;
+    background-color: #3B3B3B;
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  #chatEntryButton
+  {
+    text-align: start;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+    font-size: 12px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+  }
+  #chatEntryButton:hover
+  {
+    background-color: var(--StandardGray-3);
+  }
+  #chatElement
+  {
+    margin: 0px;
+    overflow: hidden
+  }

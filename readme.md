@@ -1,4 +1,4 @@
-# HEXAGON - Hexagonal Chess Game
+# Chessagon - Hexagonal Chess Game
 
 ## Overview
 
@@ -6,7 +6,7 @@ This project is a hexagonal chess game built for the web. The game implements cl
 CGP Grey](https://www.youtube.com/watch?v=bgR3yESAEVE).
 
 <p align="center">
-    <img src="/Art/Preview/StartingPosition.png" alt="Starting Position" />
+    <img src="/art/Preview/StartingPosition.png" alt="Starting Position" />
   </p>
 
 ## Piece Movement
@@ -17,43 +17,43 @@ Each piece’s movement is adapted to the hexagonal layout:
 Moves forward one step, with optional diagonal attacks. Special movement rules apply for the first move, allowing a two-step forward move.
 
 <p align="center">
-    <img src="/Art/Preview/PawnMovement.png" alt="Pawn movement" />
+    <img src="/art/Preview/PawnMovement.png" alt="Pawn movement" />
   </p>
 
 When a pawn reaches the last row of the opponent's side, a modal appears for the player to choose a new piece (e.g., queen, rook, bishop, or knight) to replace the pawn.
 
 <p align="center">
-    <img src="/Art/Preview/PawnPromotion.png" alt="Pawn promotion" />
+    <img src="/art/Preview/PawnPromotion.png" alt="Pawn promotion" />
   </p>
 
 ### Rook
 Moves in straight lines across the board's hexagonal axes.
 <p align="center">
-    <img src="/Art/Preview/RookMovement.png" alt="Rook movement" />
+    <img src="/art/Preview/RookMovement.png" alt="Rook movement" />
   </p>
 
 ### Bishop
 Moves diagonally along the hexagonal grid.
 <p align="center">
-    <img src="/Art/Preview/BishopMovement.png" alt="Bishop movement" />
+    <img src="/art/Preview/BishopMovement.png" alt="Bishop movement" />
   </p>
 
 ### Queen
 Combines the movement capabilities of the rook and bishop, moving both in straight and diagonal lines.
 <p align="center">
-    <img src="/Art/Preview/QueenMovement.png" alt="Queen movement" />
+    <img src="/art/Preview/QueenMovement.png" alt="Queen movement" />
   </p>
 
 ### Knight
 Follows an adapted "L"-shaped movement specific to the hexagonal grid, allowing the knight to jump over pieces.
 <p align="center">
-    <img src="/Art/Preview/KnightMovement.png" alt="Knight movement" />
+    <img src="/art/Preview/KnightMovement.png" alt="Knight movement" />
   </p>
 
 ### King
 Moves one step in any direction (straight or diagonal).
 <p align="center">
-    <img src="/Art/Preview/KingMovement.png" alt="King movement" />
+    <img src="/art/Preview/KingMovement.png" alt="King movement" />
   </p>
 
 
