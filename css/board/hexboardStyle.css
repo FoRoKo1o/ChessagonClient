@@ -33,7 +33,10 @@
     position: relative;
     pointer-events: auto;
   }
-  
+  div.hexagon img.attack-icon
+  {
+    position: absolute;
+  }
   .hexagon:nth-child(odd) {
     transform: translateY(calc(var(--h) / 2)); /* hexagon height / 2 */
   }
