@@ -12,11 +12,15 @@
 
 <body>
   <div id="mainContainer">
-    <video autoplay muted id="backgroundVideo" style="opacity: 1;">
+    <div class="mainVisualElement" id="backgroundVideoManager">
+      <img id="pausePlayIcon" src="../art/pause_icon_color.png" onclick="changeBackgroundVideoPlayingState()">
+    </div>
+    <video autoplay muted name="backgroundVideo" class="backgroundMedia" style="opacity: 1; display: block;">
       <source
         src="../art/backgroundVideos/vecteezy_chess-bishop-particles-cinematic-background-video-hd-free_4475284.mp4"
         type="video/mp4">
     </video>
+    <img name="backgroundImage" class="backgroundMedia" src="../art/index-background-image.jpg" style="display: none;">
     <section class="vh-100 container-fluid gradient-custom">
       <div class="row h-100">
         <div class="col-8"></div>
