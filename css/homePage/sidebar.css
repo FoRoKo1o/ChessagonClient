@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.panel-left {
+    padding: 20px;
+    width: 20%; 
+    background-color: transparent;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.panel-right {
+    margin-left: 20%;
+    box-sizing: border-box;
+}
+.panel-right > div
+{
+    margin-bottom: 1vh;
+}
+#sidebar
+{
+    height: 95vh;
+}
+#playerNick
+{
+    font-size: 36px;
+}
+.playerInfoRow > *
+{
+    display: inline-block;
+    margin-left: 2vh;
+}
+.playerInfoRow
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+#playersNote
+{
+    font-size: 12px;
+    color: gray;
+}
+#playerIcon
+{
+    width: 5vh;
+    height: 5vh;
+}
