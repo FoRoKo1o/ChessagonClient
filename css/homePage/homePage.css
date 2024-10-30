@@ -66,4 +66,5 @@ html, body {
 #sidebar > div:hover
 {
     background-color: var(--StandardGray-2);
+    cursor: pointer;
 }
