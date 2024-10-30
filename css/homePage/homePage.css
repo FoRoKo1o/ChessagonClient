@@ -4,7 +4,7 @@
     margin-left: 20%;
     box-sizing: border-box;
 }
-.panel-right > div
+.panel-right > div > div
 {
     margin-bottom: 1vh;
 }
