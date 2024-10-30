@@ -1,24 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.panel-left {
-    padding: 20px;
-    width: 20%; 
-    background-color: transparent;
-    box-sizing: border-box;
-    position: fixed;
-    height: 100vh;
-    left: 0;
-    top: 0;
-}
 
 .panel-right {
     margin-left: 20%;
@@ -28,10 +8,7 @@ html, body {
 {
     margin-bottom: 1vh;
 }
-#sidebar
-{
-    height: 95vh;
-}
+
 #playerNick
 {
     font-size: 36px;
@@ -56,15 +33,4 @@ html, body {
 {
     width: 5vh;
     height: 5vh;
-}
-#sidebar > div
-{
-    border-radius: 5px;
-    margin-bottom: 1vh;
-    border-bottom: solid 2px var(--StandardGray-2);
-}
-#sidebar > div:hover
-{
-    background-color: var(--StandardGray-2);
-    cursor: pointer;
 }

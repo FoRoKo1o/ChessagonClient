@@ -1,0 +1,25 @@
+.panel-left {
+    padding: 20px;
+    width: 20%; 
+    background-color: transparent;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+#sidebar
+{
+    height: 95vh;
+}
+#sidebar > div
+{
+    border-radius: 5px;
+    margin-bottom: 1vh;
+    border-bottom: solid 2px var(--StandardGray-2);
+}
+#sidebar > div:hover
+{
+    background-color: var(--StandardGray-2);
+    cursor: pointer;
+}
