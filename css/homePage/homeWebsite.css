@@ -8,3 +8,22 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
 }
+.fadedOut
+{
+    margin-top: -35px;
+    opacity: 0;
+}
+.fadedIn
+{
+    margin-top: 35px;
+    opacity: 1;
+}
+.defaultFadeState
+{
+    margin-top: 0px !important;
+    opacity: 1 !important;
+}
+.fadingTransition
+{
+    transition: 1s;
+}
