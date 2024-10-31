@@ -27,3 +27,7 @@ html, body {
 {
     transition: 1s;
 }
+.fixedElementClass
+{
+    position: fixed;
+}
