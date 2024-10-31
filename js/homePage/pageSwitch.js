@@ -1,6 +1,7 @@
 var previousContainerElement = document.getElementById('homePage');
 var animationLength = 500;
 var searchedClass = 'fixedElementClass';
+var fadeOutTimerMap = new Map();
 function SwitchPages(/*string*/ containerName) {
     let containerElement = document.getElementById(containerName);
     containerElement.getElementsByClassName
@@ -8,31 +9,25 @@ function SwitchPages(/*string*/ containerName) {
         return;
     let newElementsToAnimate = getChildElementsByClass(containerElement, searchedClass)
     let oldElementsToAnimate = getChildElementsByClass(previousContainerElement, searchedClass);
-    for(let i = 0; i < newElementsToAnimate.length; i++)
-    {
-        prepareElementToFadeIn(newElementsToAnimate[i]);
+    for (let i = 0; i < newElementsToAnimate.length; i++) {
+        prepareElementToFadeIn(newElementsToAnimate[i], i);
     }
-    for(let i = 0; i < oldElementsToAnimate.length; i++)
-    {
+    for (let i = 0; i < oldElementsToAnimate.length; i++) {
         fadeOut(oldElementsToAnimate[i]);
     }
-    for(let i = 0; i < newElementsToAnimate.length; i++)
-    {
+    for (let i = 0; i < newElementsToAnimate.length; i++) {
         fadeIn(newElementsToAnimate[i]);
     }
-    // prepareElementToFadeIn(containerElement);
-    // fadeOut(previousContainerElement);
-    // fadeIn(containerElement);
     previousContainerElement = containerElement;
 }
 function fadeOut(/*element*/ container) {
     container.classList.remove("defaultFadeState");
     container.classList.add("fadedOut");
-    setTimeout(function () {
+    fadeOutTimerMap.set(container.id, setTimeout(function () {
         container.style.display = 'none';
         container.classList.remove("fadedOut");
-        container.classList.add("defaultFadeState");
-    }, animationLength);
+        fadeOutTimerMap.set(container.id, 0);
+    }, animationLength));
 }
 function fadeIn(/*element*/ container) {
     container.style.display = 'block';
@@ -43,7 +38,12 @@ function fadeIn(/*element*/ container) {
         container.classList.remove("fadedIn");
     }, animationLength + 5);
 }
-function prepareElementToFadeIn(/*element*/ container) {
+function prepareElementToFadeIn(/*element*/ container, /*int*/ i) {
+    if (fadeOutTimerMap.get(container.id)) {
+        clearTimeout(fadeOutTimerMap.get(container.id));
+        container.style.display = 'none';
+        container.classList.remove("fadedOut");
+    }
     container.classList.remove("defaultFadeState");
     container.classList.add("fadedIn");
 }
