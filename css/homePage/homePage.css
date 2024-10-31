@@ -1,8 +1,7 @@
-
-
 .panel-right {
     margin-left: 20%;
     box-sizing: border-box;
+    position: relative;
 }
 .panel-right > div > div
 {
@@ -33,4 +32,10 @@
 {
     width: 5vh;
     height: 5vh;
+}
+#homePage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
