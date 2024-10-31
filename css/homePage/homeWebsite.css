@@ -16,7 +16,7 @@ html, body {
 .fadedIn
 {
     margin-top: 35px;
-    opacity: 1;
+    opacity: 0;
 }
 .defaultFadeState
 {
