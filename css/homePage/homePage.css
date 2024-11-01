@@ -1,0 +1,41 @@
+.panel-right {
+    margin-left: 20%;
+    box-sizing: border-box;
+    position: relative;
+}
+.panel-right > div > div
+{
+    margin-bottom: 1vh;
+}
+
+#playerNick
+{
+    font-size: 36px;
+}
+.playerInfoRow > *
+{
+    display: inline-block;
+    margin-left: 2vh;
+}
+.playerInfoRow
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+#playersNote
+{
+    font-size: 12px;
+    color: gray;
+}
+#playerIcon
+{
+    width: 5vh;
+    height: 5vh;
+}
+#homePage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

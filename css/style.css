@@ -6,6 +6,12 @@
   --StandardGray-3: #1c1c1c;
   --StandardGray-4: #0B0B0D;
 }
+.imageFitter
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .roundedCorners
 {
   border-radius: 5px;

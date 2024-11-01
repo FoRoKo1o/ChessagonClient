@@ -1,0 +1,75 @@
+#playPage
+{
+    display: none;
+}
+#playMainPanel {
+    margin-right: 25%;
+    box-sizing: border-box;
+}
+.gameMode
+{
+    background-color: #25292E !important;
+}
+.gameMode:hover
+{
+    background-color: #23272B !important;
+    cursor: pointer;
+}
+.gameMode > p
+{
+    font-size: 24px;
+    text-align: center;
+}
+/* friends list panel */
+#friendListScrollable
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#friendListScrollable > div
+{
+    margin-bottom: 2vh;
+}
+.friend > *
+{
+    display: inline-block;
+    margin-left: 1vh;
+}
+.friend
+{
+    padding: 5px;
+    border: none;
+    vertical-align: middle;
+}
+.friend:hover
+{
+    background-color: #23272B !important;
+    cursor: pointer;
+}
+.friend > img
+{
+    width: 3vh;
+    height: 3vh;
+}
+#friendListPanel {
+    padding: 20px;
+    width: 20%; 
+    background-color: transparent;
+    box-sizing: border-box;
+    height: 100vh;
+    right: 0;
+    top: 0;
+}
+#sidebar-friend
+{
+    height: 95vh;
+}
+#playPage
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

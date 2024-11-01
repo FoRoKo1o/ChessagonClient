@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.fadedOut
+{
+    margin-top: -35px;
+    opacity: 0;
+}
+.fadedIn
+{
+    margin-top: 35px;
+    opacity: 0;
+}
+.defaultFadeState
+{
+    margin-top: 0px !important;
+    opacity: 1 !important;
+}
+.fadingTransition
+{
+    transition: 1s;
+}
+.fixedElementClass
+{
+    position: fixed;
+}
