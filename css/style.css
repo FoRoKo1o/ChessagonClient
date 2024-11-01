@@ -1,5 +1,7 @@
 :root
 {
+  --standardTextColor-0: white;
+  --standardTextColor-1: gray;
   --StandardGray-0: #2B3036;
   --StandardGray-1: #303030;
   --StandardGray-2: #212121;
@@ -32,4 +34,20 @@
 ::-webkit-scrollbar-thumb
 {
   background-color: var(--StandardGray-4);
+}
+/* text styles */
+.headerText
+{
+    color: var(--standardTextColor-0);
+    font-size: 24px;
+}
+.contentText
+{
+    color: var(--standardTextColor-0);
+}
+.infoText
+{
+    font-size: 16px;
+    color: var(--standardTextColor-1);
+    font-style: italic;
 }

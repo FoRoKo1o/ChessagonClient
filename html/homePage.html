@@ -15,16 +15,16 @@
     <div class="p-4">
         <!-- side panel -->
         <div class="panel-left ">
-            <div id="sidebar" class="mainVisualElement p-4 text-white">
-                <div onclick="SwitchPages('homePage')">Home</div>
-                <div onclick="SwitchPages('playPage')">Play</div>
+            <div id="sidebar" class="mainVisualElement p-4 contentText">
+                <div onclick="switchPages('homePage')">Home</div>
+                <div onclick="switchPages('playPage')">Play</div>
                 <div onclick="">Match history</div>
-                <div onclick="SwitchPages('creditsPage')">Credits</div>
+                <div onclick="switchPages('creditsPage')">Credits</div>
             </div>
         </div>
         <!-- home page -->
-        <div class="panel-right text-white">
-            <div id="homePage" class="fadingTransition fixedElementClass">
+        <div class="panel-right contentText">
+            <div id="homePage" class="fadingTransition animatedElementClass animatedContainers">
                 <div class="mainVisualElement">
                     <div class="playerInfoRow">
                         <img src="../art/user_portrait.png" id="playerIcon">
@@ -38,8 +38,8 @@
                     </div>
                 </div>
                 <div class="mainVisualElement">
-                    <p style="font-size: 24px;">Last games</p>
-                    <div style="font-size: 16px; color: gray; font-style: italic;">no last matches</div>
+                    <p class="headerText">Last games</p>
+                    <div class="infoText">no last matches</div>
                 </div>
                 <div class="mainVisualElement">
                     <div>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div id="playPage" class="fadingTransition fixedElementClass">
+            <div id="playPage" class="fadingTransition animatedElementClass animatedContainers">
                 <div id="playMainPanel" class="mainVisualElement">
                     <div class="row p-4">
                         <div class="col-6 p-4">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="friendListPanel" class="fixedElementClass fadingTransition">
+                <div id="friendListPanel" class="animatedElementClass fadingTransition">
                     <div id="sidebar-friend" class="mainVisualElement">
                         <div id="friendListScrollable">
                             <!-- mock -->
@@ -104,11 +104,11 @@
                     </div>
                 </div>
             </div>
-            <div id="creditsPage" class="fadingTransition fixedElementClass">
+            <div id="creditsPage" class="fadingTransition animatedElementClass animatedContainers">
                 <div class="mainVisualElement">
                     <div id="graphicContent">
                         <p style="font-size: 36px;">Grafiki wykorzystane w projekcie</p>
-                        <div class="creditsSection" style="text-decoration: none;">
+                        <div class="creditsSection">
                             <div class="creditsSection-contributor hyperlinkStyle">
                                 <a href="https://www.vecteezy.com/free-videos/chess">Chess Stock Videos by Vecteezy</a>
                             </div>
