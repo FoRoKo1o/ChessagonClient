@@ -1,0 +1,26 @@
+#creditsPage {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hyperlinkStyle>a {
+    text-decoration: none;
+    color: white;
+}
+
+.hyperlinkStyle>a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #689CCE;
+}
+
+.creditsSection {
+    margin-bottom: 2vh;
+}
+
+.creditsSection-contributor{
+    font-size: 20px;
+}

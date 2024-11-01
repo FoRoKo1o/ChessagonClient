@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/homePage/homeWebsite.css">
     <link rel="stylesheet" href="../css/homePage/sidePanel.css">
+    <link rel="stylesheet" href="../css/homePage/creditsPage.css">
     <link rel="stylesheet" href="../css/homePage/homePage.css">
     <link rel="stylesheet" href="../css/homePage/playPage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,8 +18,8 @@
             <div id="sidebar" class="mainVisualElement p-4 text-white">
                 <div onclick="SwitchPages('homePage')">Home</div>
                 <div onclick="SwitchPages('playPage')">Play</div>
-                <div onclick="window.location.href='matchHistoryPage.html'">Match history</div>
-                <div onclick="window.location.href='creditsPage.html'">Credits</div>
+                <div onclick="">Match history</div>
+                <div onclick="SwitchPages('creditsPage')">Credits</div>
             </div>
         </div>
         <!-- home page -->
@@ -98,6 +99,35 @@
                             <div class="friend roundedCorners">
                                 <img src="../art/user_portrait.png">
                                 <div>Friend's Nick</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="creditsPage" class="fadingTransition fixedElementClass">
+                <div class="mainVisualElement">
+                    <div id="graphicContent">
+                        <p style="font-size: 36px;">Grafiki wykorzystane w projekcie</p>
+                        <div class="creditsSection" style="text-decoration: none;">
+                            <div class="creditsSection-contributor hyperlinkStyle">
+                                <a href="https://www.vecteezy.com/free-videos/chess">Chess Stock Videos by Vecteezy</a>
+                            </div>
+                            <div class="creditsSection-assets hyperlinkStyle">
+                                <a href="">vecteezy_chess-bishop-particles-cinematic</a>
+                                <br/>
+                                <a href="">vecteezy_chess-rook-particles-cinematic</a>
+                                <br/>
+                                <a href="">vecteezy_chess-knight-particles-cinematic</a>
+                            </div>
+                        </div>
+                        <div class="creditsSection">
+                            <div class="creditsSection-contributor hyperlinkStyle">
+                                <a href="http://www.freepik.com/">Designed by Freepik</a>
+                            </div>
+                            <div class="creditsSection-assets hyperlinkStyle">
+                                <a href="">pause_icon</a>
+                                <br/>
+                                <a href="">play_icon</a>
                             </div>
                         </div>
                     </div>
