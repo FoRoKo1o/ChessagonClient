@@ -1,0 +1,51 @@
+.popup
+{
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#contentFitter
+{
+    margin-top: 50px;
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px; /* Space between boxes */
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#closeButton
+{
+    position: fixed;
+    right: 20px;
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    background-color: var(--StandardGray-2);
+}
+#closeButton:hover
+{
+    background-color: var(--StandardGray-3);
+}
+.box {
+    color: var(--standardTextColor-0);
+    font-size: 28px;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    background-color: #25292E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box:hover
+{
+    background-color: #23272B;
+    cursor: pointer;
+}
