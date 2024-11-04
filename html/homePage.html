@@ -143,15 +143,15 @@
     <div id="gameModeMenu" class="popup mainVisualElement fadingTransition">
         <button id="closeButton" class="roundedCorners centerText contentText" onclick="CloseGameModesModal('gameModeMenu')">X</button>
         <div id="contentFitter">
-            <div class="box centerText mainVisualElement">1 min.</div>
-            <div class="box centerText mainVisualElement">1 | 1</div>
-            <div class="box centerText mainVisualElement">2 | 1</div>
-            <div class="box centerText mainVisualElement">3 min.</div>
-            <div class="box centerText mainVisualElement">3 | 2</div>
-            <div class="box centerText mainVisualElement">5 min.</div>
-            <div class="box centerText mainVisualElement">10 min.</div>
-            <div class="box centerText mainVisualElement">15 | 10</div>
-            <div class="box centerText mainVisualElement">30 min.</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('1')">1 min.</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('1|1')">1 | 1</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('2|1')">2 | 1</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('3')">3 min.</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('3|2')">3 | 2</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('5')">5 min.</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('10')">10 min.</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('15|10')">15 | 10</div>
+            <div class="box centerText mainVisualElement" onclick="StartGame('30')">30 min.</div>
         </div>
     </div>
 </body>

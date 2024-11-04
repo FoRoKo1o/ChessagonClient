@@ -1,6 +1,8 @@
 var animationDuration = 500;
-function OpenGameModesModal(/*string*/ modalId)
+var isMultiplayer;
+function OpenGameModesModal(/*string*/ modalId, /*bool*/ multiplayer)
 {
+    isMultiplayer = multiplayer;
     let modalElement = document.getElementById(modalId);
     modalElement.classList.add('fadedIn');
     modalElement.style.display = 'block';
@@ -20,4 +22,9 @@ function CloseGameModesModal(/*string*/ modalId)
         modalElement.style.display = 'none';
         modalElement.classList.remove('fadedOut');
     }, animationDuration);
+}
+function StartGame(/*string*/ specificGameMode)
+{
+    sessionStorage.setItem('singlePlayerGameMode', specificGameMode);
+    window.location.href = 'board.html';
 }
