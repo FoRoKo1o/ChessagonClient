@@ -26,16 +26,10 @@
 #playersNote
 {
     font-size: 12px;
-    color: gray;
+    color: var(--standardTextColor-1);
 }
 #playerIcon
 {
     width: 5vh;
     height: 5vh;
-}
-#homePage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
 }

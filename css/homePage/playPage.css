@@ -1,7 +1,3 @@
-#playPage
-{
-    display: none;
-}
 #playMainPanel {
     margin-right: 25%;
     box-sizing: border-box;
@@ -65,11 +61,4 @@
 #sidebar-friend
 {
     height: 95vh;
-}
-#playPage
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
 }

@@ -3,7 +3,8 @@ import { generateRookMoves } from './rookLogic.js';
 import { generateBishopMoves } from './bishopLogic.js';
 import { generateQueenMoves } from './QueenLogic.js';
 import { generateKnightMoves } from './knightLogic.js';
-import { ShowModal } from '../promotionModalController.js';
+import { ShowModal } from '../hexboard/promotionModalController.js';
+import { whiteMoves, changePlayerTurn } from '../hexboard/singlePlayerGameManager.js';
 const hexagons = document.querySelectorAll('#hexboard .hexagon');
 let activePiece = null;
 let possibleMoves = [];
@@ -16,7 +17,7 @@ function clearActivePiece() {
 
 function onHexagonClick(event) {
     const clickedHexagon = event.currentTarget;
-
+    //clears sprites on hexboard from previously selected chess piece
     if (activePiece) {
         clearActivePiece();
         clearPossibleMoves();
@@ -52,7 +53,7 @@ function onHexagonClick(event) {
         activePiece = clickedHexagon.id;
 
         generateKnightMoves(clickedHexagon, possibleMoves);
-    }    
+    }
     showPossibleMoves();
 }
 
@@ -104,8 +105,8 @@ function onPossibleMoveClick(event) {
     }
     clearActivePiece();
     clearPossibleMoves();
-    
-    addHexagonClickHandlers();
+    changePlayerTurn();
+    updateHexagonClickHandlers();
 }
 
 function clearPossibleMoves() {
@@ -115,7 +116,7 @@ function clearPossibleMoves() {
         if (moveHexagon) {
             const possibleMoveImg = moveHexagon.querySelector('img[alt="possible move"]');
             const attackImg = moveHexagon.querySelector('.attack-icon');
-            
+
             if (possibleMoveImg) {
                 possibleMoveImg.remove();
             }
@@ -130,20 +131,22 @@ function clearPossibleMoves() {
 
     possibleMoves = [];
 }
-
-function addHexagonClickHandlers() {
+function updateHexagonClickHandlers() {
+    let colorToMove;
+    if(whiteMoves)
+        colorToMove = 'white';
+    else
+        colorToMove = 'black';
     hexagons.forEach(hex => {
-        if (!hex.classList.contains('dissabled') && hex.querySelector('img')) {
+        if(hex.querySelector('img') && hex.querySelector('img').getAttribute('src').toLowerCase().includes(colorToMove))
             hex.onclick = onHexagonClick;
-        } else {
+        else
             hex.onclick = null;
-        }
-        hex.classList.remove('attack');
-    });
+    }
+    )
 }
-
-window.onload = function() {
-    clearHexboard();     
-    setPieceImages();    
-    addHexagonClickHandlers();
+window.onload = function () {
+    clearHexboard();
+    setPieceImages();
+    updateHexagonClickHandlers();
 };

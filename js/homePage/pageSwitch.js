@@ -1,10 +1,23 @@
-var previousContainerElement = document.getElementById('homePage');
+var firstPageToLoad = 'homePage';
+var previousContainerElement = document.getElementById(firstPageToLoad);
 var animationLength = 500;
-var searchedClass = 'fixedElementClass';
+var searchedClass = 'animatedElementClass';
 var fadeOutTimerMap = new Map();
-function SwitchPages(/*string*/ containerName) {
+window.onload(pageinit(firstPageToLoad))
+function pageinit(/*string*/ containerName)
+{
     let containerElement = document.getElementById(containerName);
-    containerElement.getElementsByClassName
+    let newElementsToAnimate = getChildElementsByClass(containerElement, searchedClass)
+    for (let i = 0; i < newElementsToAnimate.length; i++) {
+        prepareElementToFadeIn(newElementsToAnimate[i], i);
+    }
+    for (let i = 0; i < newElementsToAnimate.length; i++) {
+        fadeIn(newElementsToAnimate[i]);
+    }
+    previousContainerElement = containerElement;
+}
+function switchPages(/*string*/ containerName) {
+    let containerElement = document.getElementById(containerName);
     if (containerElement === previousContainerElement)
         return;
     let newElementsToAnimate = getChildElementsByClass(containerElement, searchedClass)
